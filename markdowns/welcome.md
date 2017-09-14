@@ -1,3 +1,5 @@
+# Build a Task List with Laravel 5.4 and Vue 2
+
 ![](https://cdn-images-1.medium.com/max/800/1*1cxvzNwx9AaQkh9gYC4bzw.jpeg)
 
 We’re going to follow along with
