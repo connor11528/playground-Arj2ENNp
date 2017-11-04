@@ -160,8 +160,7 @@ Our app will load one html file — **resources/views/welcome.blade.php:**
             <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
 
             <!-- Fonts -->
-            <link href="
-    " rel="stylesheet" type="text/css">
+            <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 
             <!-- Styles -->
             <link rel="stylesheet" href="
@@ -190,8 +189,7 @@ axios (comes with Laravel 5.4 by default).
         <div class='row'>
             <h1>My Tasks</h1>
             <h4>New Task</h4>
-            <form action="#" 
-    .prevent="createTask()">
+            <form action="#" @submit.prevent="createTask()">
                 <div class="input-group">
                     <input v-model="task.body" type="text" name="body" class="form-control" autofocus>
                     <span class="input-group-btn">
@@ -206,8 +204,7 @@ axios (comes with Laravel 5.4 by default).
 
                      {{ task.body }}
 
-                     <button 
-    ="deleteTask(task.id)" class="btn btn-danger btn-xs pull-right">Delete</button>
+                     <button @click.prevent="deleteTask(task.id)" class="btn btn-danger btn-xs pull-right">Delete</button>
                 </li>
             </ul>
         </div>
